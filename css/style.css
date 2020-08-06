@@ -30,7 +30,7 @@ li { /* CSS QUE TRATA A LISTA */
     
 }
 
-@media screen and (max-width:460px){
+@media(max-width:768px){
     
     .header-container li a{
         visibility: hidden;
