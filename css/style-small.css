@@ -188,7 +188,8 @@ h2 { /* TRATA DO SUBTITULO */
     
     height: 692px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
     
-    background-image: url(../css/img/bg3.jpg); /* DEFINE A IMAGEM DE FUNDO */
+    background-image: url(../css/img/iphoneresp.png); /* DEFINE A IMAGEM DE FUNDO */
+    background-position: center;
     
 
     background-size: cover;
