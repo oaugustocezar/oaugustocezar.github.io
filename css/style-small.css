@@ -30,7 +30,7 @@ li { /* CSS QUE TRATA A LISTA */
     
 }
 
-@media(max-width:768px){
+
     
     .header-container li a{
         visibility: hidden;
@@ -39,7 +39,9 @@ li { /* CSS QUE TRATA A LISTA */
     .header-container .icon{
         
         
-        padding-left: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
         
         
 
@@ -50,16 +52,25 @@ li { /* CSS QUE TRATA A LISTA */
 
     .header-container .bag-icon{
         visibility: visible;
-        padding-right: 70%;
+        right: 10%;
+        position: absolute;
+        transform: translateX(-25%);
         
         
+    }
+
+    .header-container .menu-icon{
+        visibility: visible;
+        left: 10%;
+        position: absolute;
+        transform: translateX(-25%);
     }
 
    
 
   
 
-}
+
 
 
 body { /* ESTILO DO CORPO DO SITE */
@@ -72,6 +83,8 @@ body { /* ESTILO DO CORPO DO SITE */
 }
 
 h1 { /* TRATA DO TITULO */
+
+    font-family: "SF Pro Text Regular", sans-serif; 
     
     font-size: 56px; /* TAMANHO DA FONTE DOS H1 */
     
@@ -175,8 +188,10 @@ h2 { /* TRATA DO SUBTITULO */
     
     height: 692px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
     
-    background-image: url(../css/img/bg1.jpg); /* DEFINE A IMAGEM DE FUNDO */
-    background-position: center;
+    background-image: url(../css/img/bg3.jpg); /* DEFINE A IMAGEM DE FUNDO */
+    
+
+    background-size: cover;
     
     
     
@@ -259,6 +274,7 @@ h2 { /* TRATA DO SUBTITULO */
     
     background: url("../css/img/bg2.jpg") no-repeat; /* INSERE A IMAGEM DE FUNDO BRANCA DO IPHONE 11 */
     background-position: center;
+    
     
     color: #1d1d1d; /* COMO O FUNDO E BRANCO TEM Q COLOCAR A COR PRETA PADRAO DO SITE */
     

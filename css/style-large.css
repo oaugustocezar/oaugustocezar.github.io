@@ -1,0 +1,253 @@
+* { /* SELECIONA PROJETO TODO */
+    
+    margin: 0; /* AREA DE MARGEM NOS 4 LADOS DO PROJETO - FEITO PARA LISTA IR PRO CANTO */
+    
+    padding: 0; /* DISTANCIA ENTRE TODOS ELEMENTOS E A BORDA */
+    
+}
+
+li { /* CSS QUE TRATA A LISTA */
+    
+    list-style: none; /* TIRA AS BOLINHA QUE FICA NA HORA QUE CRIA A LISTA */
+    
+}
+
+
+
+@font-face { /* LINK PARA FONTE ULILIZADA NO SITE */
+    
+    font-family: "SF Pro Text Regular"; /* NOME DA FONTE */
+    
+    src: url("../css/fonts/sf-pro-text-regular.ttf") format("truetype"); /* LOCAL QUE ESTA A FONTE E FORMATO DA FONTE */
+    
+}
+
+@font-face { /* LINK PARA FONTE ULILIZADA NO SITE */
+    
+    font-family: "SF Pro Text Bold"; /* NOME DA FONTE */
+    
+    src: url("../css/fonts/sf-pro-text-bold.ttf") format("truetype"); /* LOCAL QUE ESTA A FONTE E FORMATO DA FONTE */
+    
+}
+
+.header-container .menu-icon{
+    visibility: hidden;
+}
+
+
+body { /* ESTILO DO CORPO DO SITE */
+    
+
+    font-family: "SF Pro Text Regular", sans-serif; /* FONTE DO CORPO DO SITE, CASO NAO TENHA PEGA A OUTRA */
+    
+    color: #1d1d1f; /* COR DO TEXTO DO PROJETO */ 
+    
+}
+
+h1 { /* TRATA DO TITULO */
+    
+    font-size: 56px; /* TAMANHO DA FONTE DOS H1 */
+    
+    letter-spacing: -1px; /* ESPACAMENTO ENTRE OS CARACTERES DO TEXTO */
+    
+}
+
+h2 { /* TRATA DO SUBTITULO */
+    
+
+    font-family: "SF Pro Text Regular", sans-serif; /* FONTE DO CORPO DO SITE, CASO NAO TENHA PEGA A OUTRA */
+    
+    font-size: 28px; /* TAMANHO DA FONTE DO H2 */
+    
+    font-weight: 400; /* INTENSIDADE DO NEGRITO DA FONTE */
+    
+    letter-spacing: -1px; /* ESPACAMENTO ENTRE OS CARACTERES DO TEXTO */
+    
+
+}
+
+.header { /* ESTILIZA A CLASSE HEADER (OU SEJA, O MENU) */
+    
+    position: relative;
+
+    background: #333333; /* COR DA BARRA DE MENU */
+    
+    padding: 8.5px 0; /* DISTANCIA ENTRE TODOS ELEMENTOS E A BORDA DO MENU */
+    
+}
+
+
+.header-container { /* ESTILIZA A LISTA DENTRO DA BARRA DE MENU */
+
+    position: relative;
+
+    display: flex; /* FAZ COM QUE A LISTA FIQUE NA HORIZONTAL */
+    
+    justify-content: space-between; /* NAVEGADOR DISTRIBUI ESPACO ENTRE OS ICONES */
+    
+    max-width: 980px; /* TAMANHO DO MENU */
+    
+    margin: 0 auto; /* DEIXA A LISTA (MENU) NO CENTRO DA TELA AUTOMATICAMENTE */
+    
+}
+
+
+
+.header-container li a { /* ESTILIZA O HEADER CONTAINER LI A  */
+
+    color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
+    
+    text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
+    
+    font-size: 14px; /* TAMANHO DA FONTE DENTRO DO MENU */
+    
+    letter-spacing: -0.01em; /* DETERMINA O ESPACO ENTRE OS CARACTERES DA PALAVRA DO MENU */
+    
+}
+
+.aviso { /* TRATA DA BARRA EMBAIXO DO MENU */
+    
+
+    text-align: center; /* COLOCA A FRASE DENTRO DA BARRA NO CENTRO */
+    
+    font-size: 14px; /* TAMANHO DA FONTE DA BARRA */
+    
+}
+
+.aviso p { /* TRATA DA FRASE TODA QUE FICA EMBAIXO DO MENU */
+    
+
+    line-height: 1.47059; /* DEFINE A ALTURA DA LINHA DA FRASE */
+    
+    padding: 12px 0; /* DISTANCIA DOS ELEMENTOS DA BORDA */
+    
+}
+
+.aviso a { /* TRATA SOMENTE DO LINK DA FRASE EMBAIXO DO MENU */
+    
+
+    color: #06c; /* COR DA PALAVRA QUE E UM LINK */
+    
+    text-decoration: none; /* TIRA DECORAÇÃO DO TEXTO (ESTAVA SUBLINHADO POR SE TRATAR DE UM LINK) */
+    
+}
+
+.aviso a:hover { /* ESTILIZA O LINK AO PASSAR O MOUSE */
+    
+
+    text-decoration: underline; /* INSERE UMA LINHA ABAIXO DA PALAVRA */
+    
+
+}
+
+.iphone-se,
+.iphone-11 { /* ESTILIZA TODA A SEÇÃO DO IPHONE SE E TAMBEM DO IPHONE 11 */
+    
+
+    width: 100%; /* DEFINE A LARGURA DA SECAO */
+    
+    height: 692px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
+    
+    background-image: url(../css/img/bg1.jpg); /* DEFINE A IMAGEM DE FUNDO */
+    background-position: center;
+    
+    
+    
+    color: #ffffff; /* DEFINE A COR DA LETRA DA SECAO */
+    
+    text-align: center; /* COLOCA A FRASE NO CENTRO DA SECAO */
+    
+    padding-top: 50px; /* ESPACO ENTRE A BORDA E A PALAVRA */
+    
+
+}
+
+.iphone-se .titulo,
+.iphone-11 .titulo { /* ESTILIZA OS ELEMENTOS DO TITULO DA SECAO */
+    
+
+    margin-bottom: 6px; /* DISTANCIA ENTRE OS ELEMENTOS, OU SEJA, DISTANCIA ENTRE O TITULO E SUBTITULO */
+    
+}
+
+.iphone-se .subtitulo,
+.iphone-11 .subtitulo { /* ESTILIZA OS ELEMENTOS DO SUBTITULO DA SECAO */
+    
+
+    margin-bottom: 12px; /* DISTANCIA ENTRE OS ELEMENTOS, OU SEJA, DISTANCIA ENTRE O TITULO E SUBTITULO */
+    
+}
+
+.iphone-se a,
+.iphone-11 a { /* ESTILIZA OS DOIS LINKS DENTRO DA SECAO */
+
+    color: #2997ff; /* COLOCA A COR NO LINK */
+    
+    font-size: 21px; /* TAMANHO DA FONTE DO LINK */
+    
+    text-decoration: none; /* TIRA DECORAÇÃO DO TEXTO (ESTAVA SUBLINHADO POR SE TRATAR DE UM LINK) */
+    
+}
+
+.iphone-se a:hover,
+.iphone-11 a:hover {  /* TRATA DO QUE ACONTECE QUANDO PASSA O MOUSE */
+    
+
+    text-decoration: underline; /* COLOCA UM SUBLINHANDO QUANDO PASSA O MOUSE EM CIMA DO LINK */
+    
+}
+
+.iphone-se a:last-child,
+.iphone-11 a:last-child { /* TRATA O ULTIMO ELEMENTO DA SECAO */
+    
+
+    margin-left: 26px; /* ESPACO ENTRE OS ELEMENTOS (SAIBA MAIS E COMPRAR) */
+    
+}
+
+.iphone-se a::after,
+.iphone-11 a::after { /* PSEUDO ELO DA SECAO (PRA CONSEGUIR POR A SETA) */
+    
+
+    content: ''; /* NAO INSERE CONTEUDO NO PSEUDO ELEMENTO */
+    
+    display: inline-block; /* BLOCO EM LINHA AONDE SE PODE DEFINIR ALTURA E LARGURA */
+    
+    width: 7px; /* LARGURA DA IMAGEM (SETA) */
+    
+    height: 12px; /* ALTURA DA IMAGEM (SETA)*/
+    
+    background: url("../css/img/seta1.svg") no-repeat; /* LINK DA IMAGEM DE FUNDO (SEM REPETICAO) */
+    background-position: center;
+    
+    padding-left: 6px; /* ESPACO ENTRE A SETA E A PALAVRA */
+    
+
+}
+
+.iphone-11 { /* TRATA DA SECAO DO IPHONE 11 */
+    
+
+    margin-top: 12px; /* MARGEM ENTRE AS DUAS IMAGENS */
+    
+    background: url("../css/img/bg2.jpg") no-repeat; /* INSERE A IMAGEM DE FUNDO BRANCA DO IPHONE 11 */
+    background-position: center;
+    
+    color: #1d1d1d; /* COMO O FUNDO E BRANCO TEM Q COLOCAR A COR PRETA PADRAO DO SITE */
+    
+}
+
+.iphone-11 a::after { /* TRATA DA SETA DA SECAO IPHONE 11 */
+    
+
+    background: url("../css/img/seta2.svg") no-repeat; /* INSERE A SETA */
+    
+}
+
+.iphone-11 a { /* TRATA DA COR DOS LINK DO IPHONE 11 (FUNDO BRANCO) */
+    
+
+    color: #06c; /* INSERE A COR A PALAVRA */
+    
+
+}
