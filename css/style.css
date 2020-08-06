@@ -30,7 +30,7 @@ li { /* CSS QUE TRATA A LISTA */
     
 }
 
-@media screen and (max-width:630px){
+@media screen and (max-width:700px){
     
     .header-container li a{
         visibility: hidden;
@@ -38,7 +38,7 @@ li { /* CSS QUE TRATA A LISTA */
 
     .header-container .icon{
         
-        justify-content: space-between;
+        
         padding-left: 50%;
         
         
@@ -49,10 +49,13 @@ li { /* CSS QUE TRATA A LISTA */
     }
 
     .header-container .bag-icon{
+        visibility: visible;
+        padding-right: 70%;
         
-        padding-right: 100px;
+        
     }
-       
+
+   
 
   
 
@@ -92,6 +95,7 @@ h2 { /* TRATA DO SUBTITULO */
 
 .header { /* ESTILIZA A CLASSE HEADER (OU SEJA, O MENU) */
     
+    position: relative;
 
     background: #333333; /* COR DA BARRA DE MENU */
     
@@ -174,6 +178,8 @@ h2 { /* TRATA DO SUBTITULO */
     background-image: url(../css/img/bg1.jpg); /* DEFINE A IMAGEM DE FUNDO */
     background-position: center;
     
+    
+    
     color: #ffffff; /* DEFINE A COR DA LETRA DA SECAO */
     
     text-align: center; /* COLOCA A FRASE NO CENTRO DA SECAO */
@@ -239,6 +245,7 @@ h2 { /* TRATA DO SUBTITULO */
     height: 12px; /* ALTURA DA IMAGEM (SETA)*/
     
     background: url("../css/img/seta1.svg") no-repeat; /* LINK DA IMAGEM DE FUNDO (SEM REPETICAO) */
+    background-position: center;
     
     padding-left: 6px; /* ESPACO ENTRE A SETA E A PALAVRA */
     
@@ -250,7 +257,7 @@ h2 { /* TRATA DO SUBTITULO */
 
     margin-top: 12px; /* MARGEM ENTRE AS DUAS IMAGENS */
     
-    background: url("../css/img/bg2.jpg"); /* TINSERE A IMAGEM DE FUNDO BRANCA DO IPHONE 11 */
+    background: url("../css/img/bg2.jpg") no-repeat; /* INSERE A IMAGEM DE FUNDO BRANCA DO IPHONE 11 */
     background-position: center;
     
     color: #1d1d1d; /* COMO O FUNDO E BRANCO TEM Q COLOCAR A COR PRETA PADRAO DO SITE */
