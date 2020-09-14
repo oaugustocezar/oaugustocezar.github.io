@@ -30,8 +30,16 @@ li { /* CSS QUE TRATA A LISTA */
     
 }
 
+
+
 .header-container .menu-icon{
+    position: absolute;
     visibility: hidden;
+}
+
+.header-container .close-icon{
+  position: absolute;
+  visibility: hidden;
 }
 
 
@@ -68,7 +76,10 @@ h2 { /* TRATA DO SUBTITULO */
 
 .header { /* ESTILIZA A CLASSE HEADER (OU SEJA, O MENU) */
     
+
+    
     position: relative;
+    max-height: 10%;
 
     background: #333333; /* COR DA BARRA DE MENU */
     
@@ -91,9 +102,82 @@ h2 { /* TRATA DO SUBTITULO */
     
 }
 
+.header .search {
+
+  position: absolute;
+  visibility: hidden;
+  max-width: 1px;
+
+}
 
 
-.header-container ul li a { /* ESTILIZA O HEADER CONTAINER LI A  */
+.search-show .header-container .search{
+
+  position: relative;
+  background-color: #585856;
+  visibility: visible;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20%;
+  height: 20px;
+  
+  
+}
+
+.search-show .header-container .close-icon{
+  visibility: visible;
+  position: absolute;
+  left: 90%;
+
+}
+
+
+
+::placeholder {
+
+
+  color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
+  
+  text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
+  
+  font-size: 12px; /* TAMANHO DA FONTE DENTRO DO MENU */
+  text-align: left;
+
+  
+}
+
+.search-show {
+  position: relative; 
+  
+
+  background: #333333; /* COR DA BARRA DE MENU */
+  
+  padding: 8.5px 0; /* DISTANCIA ENTRE TODOS ELEMENTOS E A BORDA DO MENU */
+
+  background: #333333; /* COR DA BARRA DE MENU */
+
+}
+
+
+
+.search-show .header-container{
+  visibility: hidden;
+  position: relative;
+
+  display: flex; /* FAZ COM QUE A LISTA FIQUE NA HORIZONTAL */
+  
+  justify-content: space-between; /* NAVEGADOR DISTRIBUI ESPACO ENTRE OS ICONES */
+  
+  max-width: 980px; /* TAMANHO DO MENU */
+  
+  margin: 0 auto; /* DEIXA A LISTA (MENU) NO CENTRO DA TELA AUTOMATICAMENTE */
+  
+}
+
+
+
+.header-container li a { /* ESTILIZA O HEADER CONTAINER LI A  */    
 
     color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
     

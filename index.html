@@ -10,23 +10,30 @@
     <link rel="stylesheet" href="css/style-small.css" media="screen and (max-width:640px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas menores q 640px -->
     <link rel="stylesheet" href="css/style-large.css" media="screen and (min-width:641px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas maiores que 641px-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    
 </head>
 <body> <!-- CONTEUDO DA PAGINA INICIAL (BODY) -->
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
     <header class="header"> <!-- CABECALHO DA PAGINA  -->
-    
+
+        
+        
+       
        
         <ul class="header-container"> <!-- UL = LISTA EM HTML -->
 
             <!-- LI = ITEM QUE FAZ PARTE DA LISTA HTML -->
+            
+            
+            <a class="close-icon" href="#"><img src="css/img/close-icon.png" alt="Icon menu"/> </a>
             <a class="menu-icon" href="#"><img src="css/img/menu-icon.png" alt="Icon menu"/> </a>
+           
             
 
             <a class="icon" href="#"><img src="css/img/apple.svg" alt="Apple" /></a> <!-- IMAGEM DO PRIMEIRO ICONE DO MENU (MAÇA) -->
 
-        
+            <li><input class="search" type="text" name="search" placeholder="Search Apple.com"></li>
             <li><a href="#" >Mac</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <li><a href="#" >iPad</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <li><a href="#" >iPhone</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
@@ -42,7 +49,7 @@
             
         </ul>
     </header>
-    <div class="body.show">
+    <div class="content">
         <div class="aviso"> <!-- DIV QUE FICA EMBAIXO DO MENU -->
         
             <p><a href="#">Compre online</a> com entrega grátis, assistência de especialistas e muito mais.</p> <!-- FRASE QUE ESTA ESCRITA ABAIXO DO MENU -->
@@ -71,17 +78,40 @@
 
     <script type="text/javascript" charset="utf-8">
         var button = document.querySelector(".menu-icon");
-        var conteudo = document.querySelector('.body.show')
-        var lista = document.querySelector('.header-container');
-            button.addEventListener('click',function(){
+        var site = document.querySelector(".content");
+        var lista = document.querySelector(".header-container");
+        var header = document.querySelector(".header");
+        var close = document.querySelector(".close-icon");
+        var search = document.querySelector(".search-icon");
+             button.addEventListener('click',function(){
 
-                lista.className = 'header-conteiner.show';
-                conteudo.className = 'body.hidden';
+                site.className = 'esconder';
+                lista.className = 'header-container-show';
+                header.className ='header_new'
+                close.addEventListener('click',function(){
+                    lista.className = 'header-container';
+                    header.className = 'header';
+                    site.className = 'content';
+                });
+                
 
+        });
+
+        search.addEventListener('click', function(){
+
+            header.className = 'search-show';
+
+            close.addEventListener('click',function(){
+
+                header.className = 'header';
+
+            });
 
 
 
         });
+
+        
     </script>
     
 
