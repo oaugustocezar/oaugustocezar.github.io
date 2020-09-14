@@ -93,7 +93,7 @@ h2 { /* TRATA DO SUBTITULO */
 
 
 
-.header-container li a { /* ESTILIZA O HEADER CONTAINER LI A  */
+.header-container ul li a { /* ESTILIZA O HEADER CONTAINER LI A  */
 
     color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
     

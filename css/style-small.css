@@ -33,7 +33,15 @@ li { /* CSS QUE TRATA A LISTA */
 
     
     .header-container li a{
-        visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+
+    .header-container.show li a{
+        display: block;     
+
+        
+        
     }
 
     .header-container .icon{
@@ -59,15 +67,12 @@ li { /* CSS QUE TRATA A LISTA */
         
     }
 
-    .header-container .menu-icon{
+    .header-container .menu-icon{        
         visibility: visible;
         left: 10%;
         position: absolute;
         transform: translateX(-25%);
     }
-
-   
-
   
 
 
@@ -109,6 +114,8 @@ h2 { /* TRATA DO SUBTITULO */
 .header { /* ESTILIZA A CLASSE HEADER (OU SEJA, O MENU) */
     
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
 
     background: #333333; /* COR DA BARRA DE MENU */
     
@@ -128,6 +135,18 @@ h2 { /* TRATA DO SUBTITULO */
     max-width: 980px; /* TAMANHO DO MENU */
     
     margin: 0 auto; /* DEIXA A LISTA (MENU) NO CENTRO DA TELA AUTOMATICAMENTE */
+    
+}
+
+.header-container.show { /* ESTILIZA A LISTA DENTRO DA BARRA DE MENU */
+
+    position: absolute; 
+    margin-left: auto;
+    margin-right: auto;
+    display: float;     
+    height: 100%;; /* TAMANHO DO MENU */
+    width: 100%;
+    
     
 }
 

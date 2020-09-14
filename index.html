@@ -9,27 +9,24 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" /> <!-- LARGURA =  DISPOSITIVO, ESCALA = 1, ENCOLHER PRA CABER = NAO -->
     <link rel="stylesheet" href="css/style-small.css" media="screen and (max-width:640px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas menores q 640px -->
     <link rel="stylesheet" href="css/style-large.css" media="screen and (min-width:641px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas maiores que 641px-->
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-
 <body> <!-- CONTEUDO DA PAGINA INICIAL (BODY) -->
-
     <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
     <header class="header"> <!-- CABECALHO DA PAGINA  -->
     
        
         <ul class="header-container"> <!-- UL = LISTA EM HTML -->
 
-             <!-- LI = ITEM QUE FAZ PARTE DA LISTA HTML -->
-             <a class="menu-icon" href="#"><img src="css/img/menu-icon.png" alt="Icon menu"/> </a>
+            <!-- LI = ITEM QUE FAZ PARTE DA LISTA HTML -->
+            <a class="menu-icon" href="#"><img src="css/img/menu-icon.png" alt="Icon menu"/> </a>
+            
 
             <a class="icon" href="#"><img src="css/img/apple.svg" alt="Apple" /></a> <!-- IMAGEM DO PRIMEIRO ICONE DO MENU (MAÇA) -->
 
-            
-
+        
             <li><a href="#" >Mac</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <li><a href="#" >iPad</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <li><a href="#" >iPhone</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
@@ -37,7 +34,7 @@
             <li><a href="#" >TV</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <li><a href="#" >Music</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <li><a href="#" >Suporte</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
-            
+
 
             
             <a class="search-icon" href="#"><img src="css/img/search.svg" alt="Pesquisar" /></a> <!-- IMAGEM DO PENULTIMO ICONE DO MENU (LUPA) 19x19 -->
@@ -45,30 +42,48 @@
             
         </ul>
     </header>
-
-    <div class="aviso"> <!-- DIV QUE FICA EMBAIXO DO MENU -->
+    <div class="body.show">
+        <div class="aviso"> <!-- DIV QUE FICA EMBAIXO DO MENU -->
         
-        <p><a href="#">Compre online</a> com entrega grátis, assistência de especialistas e muito mais.</p> <!-- FRASE QUE ESTA ESCRITA ABAIXO DO MENU -->
+            <p><a href="#">Compre online</a> com entrega grátis, assistência de especialistas e muito mais.</p> <!-- FRASE QUE ESTA ESCRITA ABAIXO DO MENU -->
+    
+        </div>
+    
+        <section class="iphone-se"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE SE -->
+            
+            <h1 class="titulo">iPhone SE</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO  -->
+            <h2 class="subtitulo">É muito iPhone por menos.</h2> <!-- NIVEL DENTRO DA SECAO (FICA EMBAIXO DO H1) - SUBTITULO -->
+            <a href="#">Saiba maisㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
+            <a href="#">Comprarㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
+    
+        </section>
+    
+        <section class="iphone-11"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE 11  -->
+            
+            <h1 class="titulo">iPhone 11</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO -->
+            <h2 class="subtitulo">Tudo. Na medida certa</h2> <!-- NIVEL DENTRO DA SECAO (FICA EMBAIXO DO H1) - SUBTITULO -->
+            <a href="#">Saiba maisㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
+            <a href="#">Comprarㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
+    
+        </section>
 
     </div>
 
-    <section class="iphone-se"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE SE -->
-        
-        <h1 class="titulo">iPhone SE</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO  -->
-        <h2 class="subtitulo">É muito iPhone por menos.</h2> <!-- NIVEL DENTRO DA SECAO (FICA EMBAIXO DO H1) - SUBTITULO -->
-        <a href="#">Saiba maisㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
-        <a href="#">Comprarㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
+    <script type="text/javascript" charset="utf-8">
+        var button = document.querySelector(".menu-icon");
+        var conteudo = document.querySelector('.body.show')
+        var lista = document.querySelector('.header-container');
+            button.addEventListener('click',function(){
 
-    </section>
+                lista.className = 'header-conteiner.show';
+                conteudo.className = 'body.hidden';
 
-    <section class="iphone-11"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE 11  -->
-        
-        <h1 class="titulo">iPhone 11</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO -->
-        <h2 class="subtitulo">Tudo. Na medida certa</h2> <!-- NIVEL DENTRO DA SECAO (FICA EMBAIXO DO H1) - SUBTITULO -->
-        <a href="#">Saiba maisㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
-        <a href="#">Comprarㅤ</a> <!-- ELEMENTO DE ANCORA QUE IMPLEMENTA LINK - SEM LINK -->
 
-    </section>
+
+
+        });
+    </script>
+    
 
 </body> <!-- FIM DO CORPO DO HTML -->
 </html> <!-- FIM DO HTML -->
