@@ -22,6 +22,8 @@ function responsive_menu (){
 
 function search_bar(){
 
+    var close = document.querySelector(".close-icon");
+
     var header = document.querySelector(".header");
 
     var search = document.querySelector(".search-icon");
