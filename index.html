@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style-small.css" media="screen and (max-width:640px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas menores q 640px -->
     <link rel="stylesheet" href="css/style-large.css" media="screen and (min-width:641px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas maiores que 641px-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="js/myscript.js"></script>
 
     
 </head>
@@ -64,43 +65,10 @@
 
     </div>
 
-    <script type="text/javascript" charset="utf-8">
-        var button = document.querySelector(".menu-icon");
-        var site = document.querySelector(".content");
-        var lista = document.querySelector(".header-container");
-        var header = document.querySelector(".header");
-        var close = document.querySelector(".close-icon");
-        var search = document.querySelector(".search-icon");
-             button.addEventListener('click',function(){
-
-                site.className = 'esconder';
-                lista.className = 'header-container-show';
-                header.className ='header_new'
-                close.addEventListener('click',function(){
-                    lista.className = 'header-container';
-                    header.className = 'header';
-                    site.className = 'content';
-                });
-                
-
-        });
-
-        search.addEventListener('click', function(){
-
-            header.className = 'search-show';
-
-            close.addEventListener('click',function(){
-
-                header.className = 'header';
-
-            });
-
-
-
-        });
-
+    <script>responsive_menu();
+        search_bar();
+        </script>
     
-    </script>
     
 
 </body> <!-- FIM DO CORPO DO HTML -->

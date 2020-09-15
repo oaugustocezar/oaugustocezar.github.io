@@ -9,6 +9,7 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" /> <!-- LARGURA =  DISPOSITIVO, ESCALA = 1, ENCOLHER PRA CABER = NAO -->
     <link rel="stylesheet" href="css/style-small.css" media="screen and (max-width:640px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas menores q 640px -->
     <link rel="stylesheet" href="css/style-large.css" media="screen and (min-width:641px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas maiores que 641px-->
+    <script type="text/javascript" src="js/myscript.js"></script>
 
 </head>
 
@@ -24,11 +25,10 @@
         <ul class="header-container"> <!-- UL = LISTA EM HTML -->
 
              <!-- LI = ITEM QUE FAZ PARTE DA LISTA HTML -->
-             <a class="menu-icon" href="#"><img src="css/img/menu-icon.png" alt="Icon menu"/> </a>
-
-            <a class="icon" href="index.html"><img src="css/img/apple.svg" alt="Apple" /></a> <!-- IMAGEM DO PRIMEIRO ICONE DO MENU (MAÇA) -->
-
-            
+            <a class="close-icon" href="#"><img src="css/img/close-icon.png" alt="Icon menu"/> </a>
+            <a class="menu-icon" href="#"><img src="css/img/menu-icon.png" alt="Icon menu"/> </a>
+            <a class="icon" href="index.html"><img src="css/img/apple.svg" alt="Apple"></a> <!-- IMAGEM DO PRIMEIRO ICONE DO MENU (MAÇA) -->
+            <li><input class="search" type="text" name="search" placeholder="Search Apple.com"></li>           
 
             <li><a href="#" >Mac</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <li><a href="#" >iPad</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
@@ -45,36 +45,44 @@
             
         </ul>
     </header>
-
-    <div class="barracadastro"> <!-- DIV QUE FICA EMBAIXO DO MENU -->
-        <p><a class="id">ID Apple</a><a>Iniciar sessãoㅤㅤ</a><a>Crie seu ID Appleㅤㅤ</a><a>Perguntas frequentes</a></p> <!-- FRASE QUE ESTA ESCRITA ABAIXO DO MENU -->
+    <div class ="content">
+        <div class="barracadastro"> <!-- DIV QUE FICA EMBAIXO DO MENU -->
+            <p><a class="id">ID Apple</a><a>Iniciar sessãoㅤㅤ</a><a>Crie seu ID Appleㅤㅤ</a><a>Perguntas frequentes</a></p> <!-- FRASE QUE ESTA ESCRITA ABAIXO DO MENU -->
+    
+        </div>
+    
+        <section class="crieid"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE SE -->
+            
+            <h1 class="titulo">Crie seu ID Apple</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO  -->
+        </section>
+    
+        <section class="formcadastro"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE 11  -->
+            
+            <h1 class="titulo">Um ID Apple é o que você precisa para acessar todos os serviços da Apple.</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO -->
+            <h2 class="subtitulo">Já tem um ID Apple ? <a>Encontre-o aqui</a></h2> <!-- NIVEL DENTRO DA SECAO (FICA EMBAIXO DO H1) - SUBTITULO -->
+            <form action="">
+                
+                <input type="text" class="field" placeholder="Nome"> <br/>
+            
+                <input type="text" class="field" placeholder="Sobrenome"> <br/>
+            
+                <input type="text" class="field" placeholder="E-mail"> <br/>
+        
+                <input type="text" class="field" placeholder="Senha"> <br/>
+            
+                <p class="center-content">
+                    <input type="submit" class="btn btn-green" value="Concluir Cadastro">
+                </p>
+            
+            </form>
+        </section>
 
     </div>
 
-    <section class="crieid"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE SE -->
-        
-        <h1 class="titulo">Crie seu ID Apple</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO  -->
-    </section>
-
-    <section class="formcadastro"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE 11  -->
-        
-        <h1 class="titulo">Um ID Apple é o que você precisa para acessar todos os serviços da Apple.</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO -->
-        <h2 class="subtitulo">Já tem um ID Apple ? <a>Encontre-o aqui</a></h2> <!-- NIVEL DENTRO DA SECAO (FICA EMBAIXO DO H1) - SUBTITULO -->
-        <form action="">
-            
-            <input type="text" class="field" placeholder="Nome"> <br/>
-        
-            <input type="text" class="field" placeholder="Sobrenome"> <br/>
-        
-            <input type="text" class="field" placeholder="E-mail"> <br/>
     
-            <input type="text" class="field" placeholder="Senha"> <br/>
-        
-            <p class="center-content">
-                <input type="submit" class="btn btn-green" value="Concluir Cadastro">
-            </p>
-        
-        </form>
-    </section>
+    <script>responsive_menu();
+    search_bar();
+    </script>
+   
 </body> <!-- FIM DO CORPO DO HTML -->
 </html> <!-- FIM DO HTML -->
