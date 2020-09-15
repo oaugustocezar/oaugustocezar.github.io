@@ -33,7 +33,7 @@ li { /* CSS QUE TRATA A LISTA */
 
 
 .header-container .menu-icon{
-    position: absolute;
+    position: relative;
     visibility: hidden;
 }
 
@@ -79,6 +79,7 @@ h2 { /* TRATA DO SUBTITULO */
 
     
     position: relative;
+
     max-height: 10%;
 
     background: #333333; /* COR DA BARRA DE MENU */
@@ -104,7 +105,7 @@ h2 { /* TRATA DO SUBTITULO */
 
 .header .search {
 
-  position: absolute;
+  position: relative;
   visibility: hidden;
   max-width: 1px;
 
@@ -142,15 +143,16 @@ h2 { /* TRATA DO SUBTITULO */
   text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
   
   font-size: 12px; /* TAMANHO DA FONTE DENTRO DO MENU */
+
   text-align: left;
 
   
 }
 
 .search-show {
+
   position: relative; 
   
-
   background: #333333; /* COR DA BARRA DE MENU */
   
   padding: 8.5px 0; /* DISTANCIA ENTRE TODOS ELEMENTOS E A BORDA DO MENU */
@@ -162,7 +164,9 @@ h2 { /* TRATA DO SUBTITULO */
 
 
 .search-show .header-container{
+
   visibility: hidden;
+
   position: relative;
 
   display: flex; /* FAZ COM QUE A LISTA FIQUE NA HORIZONTAL */
@@ -813,6 +817,195 @@ h8{
 
     font-size: 16px;
     color: #1d1d1f;
+}
+
+h9 a  {
+  padding-top: 20px;
+  margin-top: 100px;
+  font-size: 16px;
+  font-family: "SF Pro Text Regular", sans-serif;
+  color: #06c;
+  font-weight: 400; /* INTENSIDADE DO NEGRITO DA FONTE */
+  letter-spacing: -0.016em; /* ESPACAMENTO ENTRE OS CARACTERES DO TEXTO */
+
+}
+h9 a:hover{
+  margin-top: 18px;
+  font-size: 16px;
+  font-family: "SF Pro Text Regular", sans-serif;
+  color: #06c;
+  font-weight: 400; /* INTENSIDADE DO NEGRITO DA FONTE */
+  letter-spacing: -0.016em; /* ESPACAMENTO ENTRE OS CARACTERES DO TEXTO */
+  text-decoration: underline;
+}
+
+.barracadastro { /* TRATA DA BARRA EMBAIXO DO MENU */
+    
+  text-align: left; /* COLOCA A FRASE DENTRO DA BARRA NO CENTRO */
+  
+  font-size: 8px; /* TAMANHO DA FONTE DA BARRA */
+  
+}
+
+.barracadastro p { /* TRATA DA FRASE TODA QUE FICA EMBAIXO DO MENU */
+  
+
+  line-height: 1.47059; /* DEFINE A ALTURA DA LINHA DA FRASE */
+  
+  padding: 12px 130px; /* DISTANCIA DOS ELEMENTOS DA BORDA */
+  
+}
+.barracadastro .id {
+
+  font-family: "SF Pro Text Regular", sans-serif;
+  padding: 0 410px;
+  font-size: 24px;
+  text-align: left;
+  color: #1d1d1f;
+  font-weight: 600;
+}
+
+.crieid { /* ESTILIZA TODA A SEÇÃO DO IPHONE SE E TAMBEM DO IPHONE 11 */
+    
+
+    width: 100%; /* DEFINE A LARGURA DA SECAO */
+    
+    height: 130px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
+    
+    background-image: url(../css/img/fundo.jpeg); /* DEFINE A IMAGEM DE FUNDO */
+    background-position: center;
+    
+    
+    
+    color: #ffffff; /* DEFINE A COR DA LETRA DA SECAO */
+    
+    text-align: center; /* COLOCA A FRASE NO CENTRO DA SECAO */
+    
+    padding-top: 50px; /* ESPACO ENTRE A BORDA E A PALAVRA */
+    
+}
+
+.crieid h1 { /* ESTILIZA OS DOIS LINKS DENTRO DA SECAO */
+
+    color: #ffffff; /* COLOCA A COR NO LINK */
+    
+    font-size: 40px; /* TAMANHO DA FONTE DO LINK */
+    
+    text-decoration: none; /* TIRA DECORAÇÃO DO TEXTO (ESTAVA SUBLINHADO POR SE TRATAR DE UM LINK) */
+}
+
+.formcadastro{ /* ESTILIZA TODA A SEÇÃO DO IPHONE SE E TAMBEM DO IPHONE 11 */
+    
+
+    width: 100%; /* DEFINE A LARGURA DA SECAO */
+    
+    height: 200px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
+    
+    background-position: center;
+    
+    color: #1d1d1d; /* DEFINE A COR DA LETRA DA SECAO */
+    
+    text-align: center; /* COLOCA A FRASE NO CENTRO DA SECAO */
+    
+    padding-top: 50px; /* ESPACO ENTRE A BORDA E A PALAVRA */
+
+    font-size: 40px;
+    
+
+}
+
+.formcadastro h1 { /* ESTILIZA OS ELEMENTOS DO TITULO DA SECAO */
+    
+    font-family: "SF Pro Text Regular", sans-serif;
+    margin-bottom: 6px; /* DISTANCIA ENTRE OS ELEMENTOS, OU SEJA, DISTANCIA ENTRE O TITULO E SUBTITULO */
+    font-size: 17px;
+    font-weight: 50;
+    
+}
+
+.formcadastro h2{ /* ESTILIZA OS ELEMENTOS DO SUBTITULO DA SECAO */
+    
+    font-family: "SF Pro Text Regular", sans-serif;
+    margin-bottom: 12px; /* DISTANCIA ENTRE OS ELEMENTOS, OU SEJA, DISTANCIA ENTRE O TITULO E SUBTITULO */
+    font-size: 17px;
+    font-weight: 50;
+    
+}
+
+.formcadastro h2 a {
+  text-align: center;
+  font-size: 17px;
+  color: #06c;
+}
+
+
+form{
+
+  font-family: "SF Pro Text Regular", sans-serif;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 10px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 300px;
+  position: relative;
+}
+
+input, textarea{
+  font-size: 16px;
+  font-family: "SF Pro Text Regular", sans-serif;
+  border: 20px;
+  outline-color: #06c;
+  width: 280px;
+  
+}
+
+.field{
+
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: solid 1px #8f8fa1;
+  padding: 18px;
+
+  
+}
+
+.field:focus{
+  border-color: #06c;
+}
+
+.center-content{
+
+  font-size: 20px;
+  padding-top: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.btn{
+  font-size: 20px;
+	border-radius: 20px;
+	display: inline-block;
+	padding: 20px 15px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.3); 
+}
+
+.btn-green{
+	color: white;
+	background-color: #06c;
+}
+
+.btn-black{
+	color: #ddd;
+	background-color: #222;
+}
+.btn-green:hover{
+	background-color: #06c;	
+}
+.btn-green:active{
+	background-color: #06c;
 }
 
   /*//////////////////////////////////////////////////////////////////
