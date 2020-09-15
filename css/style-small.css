@@ -192,15 +192,16 @@ h2 { /* TRATA DO SUBTITULO */
 .header-container-show li { /* ESTILIZA O HEADER CONTAINER LI A  */
 
     position: relative;
-    padding-top: 35px;
+    padding-top: 30px;
     width: 100%;
     list-style-position: inside;  
     color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
     text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
     font-size: 18px; /* TAMANHO DA FONTE DENTRO DO MENU */
-    border-bottom: 1px solid;
+    border-bottom: 0px solid;
     border-color:#333333;
-    border-radius: 20px;    
+    border-radius: 20px; 
+     
 }
 .search{
     visibility: hidden;
