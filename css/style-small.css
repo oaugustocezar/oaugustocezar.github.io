@@ -204,10 +204,18 @@ h2 { /* TRATA DO SUBTITULO */
      
 }
 .search{
+    
+    border-radius: 20px;
     visibility: hidden;
+    text-align: left;
+    padding: 10px 7px;
+    text-decoration: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    font-family: "SF Pro Text Regular", sans-serif;
 }
 
 .header-container-show .search{
+    border-radius: 20px;
     visibility: visible;
     border: transparent;
     position: relative;
@@ -223,21 +231,20 @@ h2 { /* TRATA DO SUBTITULO */
 
 ::placeholder {
 
-
+    border-radius: 20px;
     color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
     
     text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
     
-    font-size: 18px; /* TAMANHO DA FONTE DENTRO DO MENU */
+    font-size: 16px; /* TAMANHO DA FONTE DENTRO DO MENU */
 
   }
 
 
 .header-container-show li a { /* ESTILIZA O HEADER CONTAINER LI A  */
-
-
-    
+    border-radius: 20px;
     padding-left: 10%;
+
     color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
     
     text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
@@ -249,18 +256,16 @@ h2 { /* TRATA DO SUBTITULO */
 
 
 .header-container-show .icon{      
-       
-    
+    border-radius: 20px;
     position: absolute;
     margin-top: 2%;
     left: 50%;
-    
-    
-    
+
 
 }
 
 .esconder {
+    border-radius: 20px;
     position: absolute;
     display: none;
     max-height: 1px ;
@@ -268,10 +273,8 @@ h2 { /* TRATA DO SUBTITULO */
 }
 
 
-
-
-
 .header-container li a { /* ESTILIZA O HEADER CONTAINER LI A  */
+    border-radius: 20px;
 
     color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
     
