@@ -48,7 +48,7 @@
                         <div class="espaco">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
                             ㅤ  
                         </div>
-                        <form class="login100-form validate-form flex-sb flex-w">
+                        <form id="form_login" class="login100-form validate-form flex-sb flex-w">
                             <span class="login100-form-title p-b-51">
                             </span>
                             <div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
@@ -69,10 +69,9 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="container-login100-form-btn m-t-17">
-                                <button class="login100-form-btn">
-                                    Iniciar Sessão
-                                </button>
+                            <div class="container-login100-form-btn m-t-17">                                
+                                <input type="submit" class="login100-form-btn" value="iniciar Sessão">                                   
+                                
                                 <h6 class= "texto1">
                                     <c href="#">Esqueceu seu ID Apple ou senha?</c>
                                 </h6>
@@ -92,7 +91,7 @@
         </div>
     </section>
     <script>responsive_menu();
-        search_bar();
+        search_bar(); getUserValues();
         </script>
 </body> <!-- FIM DO CORPO DO HTML -->
 </html> <!-- FIM DO HTML -->

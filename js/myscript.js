@@ -56,7 +56,7 @@ function setUserValues(){
     
 
     
-    form.addEventListener('submit', function(e) {       
+    form.addEventListener('submit', function() {       
         
         
         if(username.value.length < 3){
@@ -82,6 +82,41 @@ function setUserValues(){
       
     });
    
+}
+
+function getUserValues(){
+
+
+    var form = document.getElementById('form_login');
+    var username = document.getElementById('username');
+    var passwd = document.getElementById('passwd');
+
+    form.addEventListener('submit', function(e){
+
+        var result_username = localStorage.getItem(username.value+' username');
+        var result_passwd= localStorage.getItem(username.value+ ' passwd');
+        
+       if(result_username == username.value){
+
+           if(result_passwd == passwd.value){
+               alert('logado');
+           }else{
+               alert('senha invalida');
+           }           
+       }else{
+           alert('user nao cadastrado');
+       }   
+
+        
+    });
+
+
+
+
+
+
+
+
 }
 
 
