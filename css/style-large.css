@@ -114,22 +114,27 @@ h2 { /* TRATA DO SUBTITULO */
 
 .search-show .header-container .search{
 
-  position: relative;
-  background-color: #585856;
+  font-family: "SF Pro Text Regular", sans-serif;
+  text-decoration: none;
+  color:#1d1d1f;
+  border-radius: 20px;
+  position: center;
+  background-color: #d6d6d6;
   visibility: visible;
   width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 20%;
-  height: 20px;
+  height: 30px;
   
   
 }
 
 .search-show .header-container .close-icon{
+  margin-top: 4px;
   visibility: visible;
   position: absolute;
-  left: 90%;
+  left: 88%;
 
 }
 
