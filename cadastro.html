@@ -60,18 +60,19 @@
             
             <h1 class="titulo">Um ID Apple é o que você precisa para acessar todos os serviços da Apple.</h1> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO -->
             <h2 class="subtitulo">Já tem um ID Apple ? <a>Encontre-o aqui</a></h2> <!-- NIVEL DENTRO DA SECAO (FICA EMBAIXO DO H1) - SUBTITULO -->
-            <form action="">
-                
-                <input type="text" class="field" placeholder="Nome"> <br/>
-            
-                <input type="text" class="field" placeholder="Sobrenome"> <br/>
-            
-                <input type="text" class="field" placeholder="E-mail"> <br/>
-        
-                <input type="password" class="field" placeholder="Senha"> <br/>
+            <form id="formulario" action="">
+                <div class= "field">
 
-                <input type="password" class="field" placeholder="Confirme sua Senha"> <br/>
+                    <input id="fname" type="text" class="field" placeholder="Nome"> <br/>
+                
+                    <input id="lname" type="text" class="field" placeholder="Sobrenome"> <br/>
+                
+                    <input id="username" type="text" class="field" placeholder="E-mail"> <br/>
             
+                    <input id="passwd" type="password" class="field" placeholder="Senha"> <br/>
+
+                    <input id="confpasswd" type="password" class="field" placeholder="Confirme sua Senha"> <br/>
+                </div>
                 <p class="center-content">
                     <input type="submit" class="btn btn-green" value="Concluir Cadastro">
                 </p>
@@ -82,9 +83,7 @@
     </div>
 
     
-    <script>responsive_menu();
-    search_bar();
-    </script>
+    <script>responsive_menu(); search_bar(); setUserValues();</script>
    
 </body> <!-- FIM DO CORPO DO HTML -->
 </html> <!-- FIM DO HTML -->

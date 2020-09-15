@@ -44,6 +44,57 @@ function search_bar(){
 
 
 }
+
+
+function setUserValues(){
+
+    var form = document.getElementById('formulario');
+    var username = document.getElementById('username')
+    var passwd = document.getElementById('passwd');
+    var confpasswd = document.getElementById('confpasswd');
+    var name = document.getElementById('fname');
+    
+
+    
+    form.addEventListener('submit', function(e) {       
+        
+        
+        if(username.value.length < 3){
+            alert('user inválido')
+        }else{
+            var validate_username = "ok";
+
+        }
+        if(passwd.value == confpasswd.value){
+
+            localStorage.setItem(username.value + ' passwd',passwd.value);
+            localStorage.setItem(username.value + ' username',username.value);
+            var validate_passwd = "ok";           
+            
+        }else{
+            alert('Senhas diferentes');
+        } 
+        console.log(validate_username);
+        if(validate_username == "ok" && validate_passwd == "ok"){
+            alert('Usuário cadastrado com Local Storage');
+        }
+         
+      
+    });
+   
+}
+
+
+
+
+    
+    
+
+
+     
+
+
+
         
 
        
