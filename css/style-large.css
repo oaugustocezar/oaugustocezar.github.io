@@ -1013,6 +1013,23 @@ input, textarea{
 	background-color: #06c;
 }
 
+.pesquisa a {
+
+  font-family: "SF Pro Text Regular", sans-serif;
+  color:#1d1d1f;
+  margin-left: 540px;
+  font-size: 30px;
+}
+
+.botao{
+
+  text-align: center;
+  font-size: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  
+  }
+
   /*//////////////////////////////////////////////////////////////////
   [ Responsive ]*/
   
