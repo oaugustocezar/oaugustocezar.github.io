@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style-small.css" media="screen and (max-width:640px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas menores q 640px -->
     <link rel="stylesheet" href="css/style-large.css" media="screen and (min-width:641px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas maiores que 641px-->
     <script type="text/javascript" src="js/myscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -63,27 +64,30 @@
             <form id="formulario" action="">
                 <div class= "field">
 
-                    <input id="fname" type="text" class="field" placeholder="Nome"> <br/>
-                
-                    <input id="lname" type="text" class="field" placeholder="Sobrenome"> <br/>
-                
+                                 
                     <input id="username" type="text" class="field" placeholder="E-mail"> <br/>
             
                     <input id="passwd" type="password" class="field" placeholder="Senha"> <br/>
 
                     <input id="confpasswd" type="password" class="field" placeholder="Confirme sua Senha"> <br/>
                 </div>
-                <p class="center-content">
-                    <input type="submit" class="btn btn-green" value="Concluir Cadastro">
-                </p>
+               
             
             </form>
+            <p class="center-content">
+                <input id="button" type="submit" class="btn btn-green" value="Concluir Cadastro">
+            </p>
         </section>
 
     </div>
 
+
+
+
+    
+
     
     <script>responsive_menu(); search_bar(); setUserValues();</script>
-   
+    <script src =''></script>
 </body> <!-- FIM DO CORPO DO HTML -->
 </html> <!-- FIM DO HTML -->

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style-small.css" media="screen and (max-width:640px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas menores q 640px -->
     <link rel="stylesheet" href="css/style-large.css" media="screen and (min-width:641px)" /> <!-- LINK DA PASTA DE ESTILO CSS para telas maiores que 641px-->
     <script type="text/javascript" src="js/myscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
 </head>
@@ -69,17 +70,18 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="container-login100-form-btn m-t-17">                                
-                                <input type="submit" class="login100-form-btn" value="iniciar Sessão">                                   
-                                
-                                <h6 class= "texto1">
-                                    <c href="#">Esqueceu seu ID Apple ou senha?</c>
-                                </h6>
-                                <h9 class= "texto2">
-                                    <a class="icon" href="cadastro.html">Não tem ID Apple? Crie agora.</a>
-                                </h9>
-                            </div>
+                            
                         </form>
+                        <div class="container-login100-form-btn m-t-17">                                
+                            <input id = "button_login" type="submit" class="login100-form-btn" value="iniciar Sessão">                                   
+                            
+                            <h6 class= "texto1">
+                                <c href="#">Esqueceu seu ID Apple ou senha?</c>
+                            </h6>
+                            <h9 class= "texto2">
+                                <a class="icon" href="cadastro.html">Não tem ID Apple? Crie agora.</a>
+                            </h9>
+                        </div>
                     </div>
                     <h8 class="aviso2"> <!-- DIV QUE FICA EMBAIXO DO MENU -->
                         Precisa de mais ajuda? Entre no chat ou ligue para 0800-761-0867<!-- FRASE QUE ESTA ESCRITA ABAIXO DO MENU -->

@@ -47,65 +47,123 @@ function search_bar(){
 
 
 function setUserValues(){
+    
 
-    var form = document.getElementById('formulario');
+    var form = document.getElementById('button');
     var username = document.getElementById('username')
     var passwd = document.getElementById('passwd');
-    var confpasswd = document.getElementById('confpasswd');
-    var name = document.getElementById('fname');
-    
+    var confpasswd = document.getElementById('confpasswd');  
 
     
-    form.addEventListener('submit', function() {       
-        
-        
-        if(username.value.length < 3){
-            alert('user inválido')
+
+    form.addEventListener('click', function(){
+
+
+        if(username.value == ''){
+
+            alert("Email deve ser preenchido");
+            
+        }else if (username.value.length < 4){
+
+            alert("Email inválido");
+            
+
         }else{
-            var validate_username = "ok";
 
+            var validate_username ="ok";
+            
         }
-        if(passwd.value == confpasswd.value){
 
-            localStorage.setItem(username.value + ' passwd',passwd.value);
-            localStorage.setItem(username.value + ' username',username.value);
-            var validate_passwd = "ok";           
+        if(passwd.value == ''){
+            alert("Senha deve ser preenchida");
+        }else if(passwd.value.length < 4){
+            alert("Senha inválida");
+        }else if(passwd.value == confpasswd.value){
+            var validate_passwd = "ok";
             
         }else{
-            alert('Senhas diferentes');
-        } 
-        console.log(validate_username);
-        if(validate_username == "ok" && validate_passwd == "ok"){
-            alert('Usuário cadastrado com Local Storage');
+            alert("senhas não coincidem");
         }
-         
-      
+        
+        
+        
+
+        if(validate_username == "ok" && validate_passwd == "ok"){
+
+            var json = axios.post("https://reqres.in/api/register",{
+            "email": username.value,
+            "password": passwd.value
+        })
+            .then(function(r){ 
+
+                console.log(r);
+
+
+                if(r.status == 200){
+                    alert("Cadastro realizado com sucesso");                    
+                }
+
+                
+ 
+    
+            })
+            .catch(function(error){   
+                
+                alert(error);
+                
+               
+            }); 
+
+        }
+        
+
+            
+
     });
+
+    
+    
+    
+
+    
    
+    
+    
 }
 
 function getUserValues(){
 
 
-    var form = document.getElementById('form_login');
+    var form = document.getElementById('button_login');
     var username = document.getElementById('username');
     var passwd = document.getElementById('passwd');
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('click', function(e){   
 
-        var result_username = localStorage.getItem(username.value+' username');
-        var result_passwd= localStorage.getItem(username.value+ ' passwd');
         
-       if(result_username == username.value){
+        
+        
+        var json = axios.post("https://reqres.in/api/login",{
+            "email": username.value,
+            "password": passwd.value
+        })
+            .then(function(r){                
 
-           if(result_passwd == passwd.value){
-               alert('logado');
-           }else{
-               alert('senha invalida');
-           }           
-       }else{
-           alert('user nao cadastrado');
-       }   
+
+                if(r.status == 200){
+                    alert("Login efetuado com sucesso");
+                    localStorage.setItem("login", username.value);
+                    localStorage.setItem(username.value, r.data.token);                                       
+                }               
+ 
+    
+            })
+            .catch(function(error){   
+                
+                alert("Credenciais inválidas");
+                
+               
+            }); 
 
         
     });
