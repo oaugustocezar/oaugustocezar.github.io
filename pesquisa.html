@@ -35,7 +35,8 @@
             <li><a href="#" >Suporte</a></li> <!-- LINK NULO PQ NAO LEVA A LUGAR NENHUM - SOMENTE NOME NO MENU COM A COR DA LETRA -->
             <a class="search-icon" href="#"><img src="css/img/search.svg" alt="Pesquisar" /></a> <!-- IMAGEM DO PENULTIMO ICONE DO MENU (LUPA) 19x19 -->
             <a class="bag-icon" href="login.html"><img src="css/img/bag.svg" alt="Carrinho" /></a> <!-- IMAGEM DO ULTIMO ICONE DO MENU (CARRINHO) -->
-            
+            <li id= "login_information"></li>
+            <li><a id="sair" href="#">sair</a></li>
         </ul>
     </header>
     <div class="content">
@@ -45,22 +46,26 @@
     
         </div>
     
-        <section class="pesquisa"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE SE -->
+        <section class="teste"> <!-- SEÇÃO QUE TRATA DA FRASE EM CIMA DA IMAGEM DO IPHONE SE -->
+            
+            <ul class="pesquisa">
+                <li><input id="search" class="search" type="text" name="search" placeholder="Search a date in format YYYY-MM-DD "></li>
+                <li><button id="button_api">Teste</button></li>
+
+            </ul>
             
             <a>Resultados da Busca:</a> <!-- NIVEL DENTRO DA SEÇÃO (FICA MAIS EM CIMA) - TITULO  -->
+            <ul id ="result"></ul>
     
         </section>
-        <section class="botao">
-            <p class="center-content1">
-                <input id="button" type="submit" class="btn btn-green" value="Home">
-            </p>
-
-        </section>
+       
     
     </div>
 
     <script>responsive_menu();
-        search_bar();
+        search_api();
+        
+        verify_login();
         </script>
 </body> <!-- FIM DO CORPO DO HTML -->
 </html> <!-- FIM DO HTML -->

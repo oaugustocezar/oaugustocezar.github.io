@@ -1,5 +1,5 @@
 function responsive_menu (){
-            var button = document.querySelector(".menu-icon");
+        var button = document.querySelector(".menu-icon");
         var site = document.querySelector(".content");
         var lista = document.querySelector(".header-container");
         var header = document.querySelector(".header");
@@ -48,7 +48,7 @@ function search_bar(){
 
 function setUserValues(){
     
-
+    var index = document.getElementById('icon');
     var form = document.getElementById('button');
     var username = document.getElementById('username')
     var passwd = document.getElementById('passwd');
@@ -100,7 +100,8 @@ function setUserValues(){
 
 
                 if(r.status == 200){
-                    alert("Cadastro realizado com sucesso");                    
+                    alert("Cadastro realizado com sucesso");   
+                    open('login.html')                 
                 }
 
                 
@@ -115,7 +116,8 @@ function setUserValues(){
             }); 
 
         }
-        
+
+           
 
             
 
@@ -153,7 +155,8 @@ function getUserValues(){
                 if(r.status == 200){
                     alert("Login efetuado com sucesso");
                     localStorage.setItem("login", username.value);
-                    localStorage.setItem(username.value, r.data.token);                                       
+                    localStorage.setItem(username.value, r.data.token);  
+                    open('index.html');                                     
                 }               
  
     
@@ -170,6 +173,10 @@ function getUserValues(){
 
 
 
+    
+
+
+
 
 
 
@@ -177,6 +184,111 @@ function getUserValues(){
 
 }
 
+
+function verify_login(){
+
+    var sair = document.getElementById("sair");
+    var login_menu = document.getElementById("login_information");
+    var login = localStorage.getItem("login");
+
+
+    if(login == null){
+        login_menu.innerHTML="";
+        sair.innerHTML="";
+
+
+    }else{
+        login_menu.innerHTML="<li>"+login+"</li>";   
+        
+        
+
+
+        sair.addEventListener('click', function(e){
+
+            localStorage.clear();
+            login_menu.innerHTML="";
+            location.reload();
+
+
+        });
+
+    }
+
+    
+        
+    
+
+
+}
+
+function search_api(){
+
+    var search = document.getElementById('search');
+    var button = document.getElementById('button_api');
+    var p = document.getElementById('result');
+    
+    button.addEventListener('click', function(){
+        axios.get("https://calendarific.com/api/v2/holidays?&api_key=bb433f717e522421e7b553183371f2c27a83feae&country=BR&year="+search.value.substring(0,4))
+            .then(function(res){
+                console.log(res.data.response.holidays)
+                let docs = res.data.response.holidays;
+                var i =0;
+                var control=0;
+                for(i; i < docs.length; i++){
+                    
+                    if(docs[i].date.iso==search.value){
+                        
+
+                        var li = document.createElement('li');
+                        li.innerHTML = "Date: "+docs[i].date.iso+"<br>"+"Name: "+ docs[i].name+"<br>" + "Description: "+docs[i].description+"<br>"+ "Country: "+docs[i].country.name+"<br>";
+                                          
+                        p.appendChild(li);                         
+                        
+
+
+                    }else{
+
+                        control ++;
+                    
+                    }  
+                    
+                    
+
+                    
+                }
+
+            
+            if(control == i ){
+                var li = document.createElement('li');
+                li.innerHTML ="não encontrado";
+                                  
+                p.appendChild(li);    
+
+            }
+
+                       
+                
+                
+            });
+
+
+
+
+    });
+
+
+
+    
+
+
+ 
+
+    
+
+
+
+
+}
 
 
 

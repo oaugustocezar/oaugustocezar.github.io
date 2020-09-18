@@ -14,6 +14,11 @@ li { /* CSS QUE TRATA A LISTA */
 
 
 
+
+
+
+
+
 @font-face { /* LINK PARA FONTE ULILIZADA NO SITE */
     
     font-family: "SF Pro Text Regular"; /* NOME DA FONTE */
@@ -122,6 +127,30 @@ h2 { /* TRATA DO SUBTITULO */
   background-color: #d6d6d6;
   visibility: visible;
   width: 800px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 20%;
+  height: 30px;
+  
+  
+}
+
+.pesquisa {
+  position: center;
+  display: flex;
+
+}
+
+.pesquisa .search{
+
+  font-family: "SF Pro Text Regular", sans-serif;
+  text-decoration: none;
+  color:#1d1d1f;
+  border-radius: 20px;
+  position: center;
+  background-color: #d6d6d6;
+  visibility: visible;
+  width: 600px;
   margin-left: 10px;
   margin-right: 10px;
   padding-left: 20%;
@@ -1013,11 +1042,11 @@ input, textarea{
 	background-color: #06c;
 }
 
-.pesquisa a {
-
+.teste a {
+  
   font-family: "SF Pro Text Regular", sans-serif;
   color:#1d1d1f;
-  margin-left: 540px;
+  margin-left: auto;
   font-size: 30px;
 }
 

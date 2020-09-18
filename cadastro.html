@@ -43,7 +43,8 @@
             
             <a class="search-icon" href="#"><img src="css/img/search.svg" alt="Pesquisar" /></a> <!-- IMAGEM DO PENULTIMO ICONE DO MENU (LUPA) 19x19 -->
             <a class="bag-icon" href="login.html"><img src="css/img/bag.svg" alt="Carrinho" /></a> <!-- IMAGEM DO ULTIMO ICONE DO MENU (CARRINHO) -->
-            
+            <li id= "login_information"></li>
+            <li><a id="sair" href="#">sair</a></li>
         </ul>
     </header>
     <div class ="content">
@@ -87,7 +88,11 @@
     
 
     
-    <script>responsive_menu(); search_bar(); setUserValues();</script>
+    <script>responsive_menu();
+        search_bar();
+        setUserValues();
+        verify_login();
+        </script>
     <script src =''></script>
 </body> <!-- FIM DO CORPO DO HTML -->
 </html> <!-- FIM DO HTML -->
