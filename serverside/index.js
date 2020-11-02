@@ -20,10 +20,11 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 app.get('/users', async (req, res) => {
-    const busca = req.query.busca,
+
+    const busca = req.query.busca;
            
     users = await userDAO.find(busca);      
-    console.log(busca);
+    
     res.json(users);
     
 });
@@ -32,7 +33,9 @@ app.get('/users', async (req, res) => {
 app.post('/register', async (req,res)=>{
     const email =  req.body.email;
     const senha =  req.body.password
-    userDAO.insert(email, senha);
+    
+    const user = await userDAO.insert(email, senha);
+    res.json({ok:true});
 
 });
 
