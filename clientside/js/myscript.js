@@ -48,8 +48,8 @@ function search_bar(){
 
 function setUserValues(){
     
-    var index = document.getElementById('icon');
-    var form = document.getElementById('button');
+    
+    var form = document.getElementById('button-cadastro');
     var username = document.getElementById('username')
     var passwd = document.getElementById('passwd');
     var confpasswd = document.getElementById('confpasswd');  
@@ -82,7 +82,13 @@ function setUserValues(){
 
     });
 
+    
+
     passwd.addEventListener("keyup",function(){
+
+        if(passwd.value == confpasswd.value){
+            validate_passwd = "ok";
+        }
 
         if(passwd.value == ''){
             verify_passwd.innerHTML = "Senha deve ser preenchida";   
@@ -104,28 +110,40 @@ function setUserValues(){
             verify_confpasswd.innerHTML ="";
 
         }
+        
 
 
     });
-
+    
+    
+    
     
 
-    form.addEventListener('submit', function(){
+    form.addEventListener('click', async function(){
 
-
+       
+        
+        console.log(validate_username);
+        console.log(username.value);
+        console.log(passwd.value);
+        console.log(confpasswd.value);
+        console.log(validate_passwd);
 
         if(validate_username == "ok" && validate_passwd == "ok"){
+            
 
-            var json = axios.post("http://localhost:3000/register",{
+            var json = await axios.post("http://localhost:3000/register",{
             "email": username.value,
             "password": passwd.value
         })
             .then(function(r){ 
 
+                
+
                 console.log(r);
 
 
-                if(r.status == 200){
+                if( r.status == 200){
                     alert("Cadastro realizado com sucesso");   
                     open('login.html');                 
                 }
@@ -225,7 +243,7 @@ function getUserValues(){
         
         
         
-        var json = axios.post("https://reqres.in/api/login",{
+        var json = axios.post("http://localhost:3000/login",{
             "email": username.value,
             "password": passwd.value
         })

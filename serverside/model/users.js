@@ -5,8 +5,8 @@ module.exports = class Users{
         const conn = await  MongoClient.connect('mongodb://localhost:27017');
         const db =  conn.db('application');
         let result;
-        if(busca){
-            result = await db.collection('users').find({email: new RegExp('^' + busca)}).toArray();
+        if(email){
+            result = await db.collection('users').find({email:email,senha:senha}).toArray();
             
         }else{    
 
