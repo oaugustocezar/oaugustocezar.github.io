@@ -1,7 +1,9 @@
+const { error } = require('console');
 let http = require('http'),
     path = require('path')
     express = require('express'),
     app = express(),
+    expect = require('expect'),
     cors = require('cors'),
     userDAO = require('./model/users');
 
@@ -32,22 +34,67 @@ app.get('/users', async (req, res) => {
 
 
 app.post('/register', async (req,res)=>{
+    
     const email =  req.body.email;
     const senha =  req.body.password
-    
+    console.log(email);
+
+
+    const userEmail  = await userDAO.find(email);
+    console.log(userEmail.length);
+    if(userEmail.length>0){
+        return res.status(400).json({'error': 'Email já registrado'});
+       }
+
     const user = await userDAO.insert(email, senha);
-    res.json({ok:true});
+    return res.status(200).json({"mensagem": "Cadastro sucedido"})
+
+       
+
+    
+         
+         
+
+        
+    
+    
+    
+    
 
 });
 
 
-app.post('/login', async(req,res)=>{
+app.post('/login', async (req,res,next)=>{
     const email = req.body.email; 
-    const senha = req.body.password;
-    console.log(email);
-    console.log(senha);
-    const user = await userDAO.find(email,senha);
-    res.json({ok:true});
+    const senha = req.body.password; 
+   // console.log(email);  
+   // console.log(senha);
+ 
+    const user = await userDAO.find(email);
+    console.log(user.length);
+    if(user.length == 1){
+        if(user[0].email == email && user[0].senha == senha){
+
+            return res.status(200).json({"mensagem": "Login efetuado com sucesso"});
+       }else{
+            return res.status(400).json({"mensagem": "senha incorreta"});
+
+       }
+
+    }else{
+        return res.status(400).json({"mensagem": "usuario não cadastrado"});
+
+   }
+
+    
+   
+
+    
+
+    
+     
+    
+    
 })
 
 
