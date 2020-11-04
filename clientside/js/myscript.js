@@ -132,7 +132,7 @@ function setUserValues(){
         if(validate_username == "ok" && validate_passwd == "ok"){
             
 
-            var json = await axios.post("http://localhost:3000/register",{
+            var json = await axios.post("https://webapputfpr.herokuapp.com/register",{
             "email": username.value,
             "password": passwd.value
         })
@@ -245,7 +245,7 @@ function getUserValues(){
         
         
         
-        var json = axios.post("http://localhost:3000/login",{
+        var json = axios.post("https://webapputfpr.herokuapp.com/login",{
             "email": username.value,
             "password": passwd.value
         })

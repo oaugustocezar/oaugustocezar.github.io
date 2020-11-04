@@ -14,6 +14,11 @@ li { /* CSS QUE TRATA A LISTA */
 
 
 
+
+
+
+
+
 @font-face { /* LINK PARA FONTE ULILIZADA NO SITE */
     
     font-family: "SF Pro Text Regular"; /* NOME DA FONTE */
@@ -30,85 +35,22 @@ li { /* CSS QUE TRATA A LISTA */
     
 }
 
-    .header-container li a{
 
-        
-        display: none;
-        
-    }
 
-    .header-container .icon{
-        
-        left: 50%;
-        position: absolute;
+.header-container .menu-icon{
+    position: relative;
+    visibility: hidden;
+}
+
+.header-container .close-icon{
+  position: absolute;
+  visibility: hidden;
+}
+
+
+body { /* ESTILO DO CORPO DO SITE */
     
-    }
 
-
-    .header-container .search-icon{
-        
-        visibility: hidden;
-    }
-
-    .header-container .close-icon{
-        
-        visibility: hidden;
-    }
-
-    .header-container .bag-icon{
-        
-        visibility: visible;
-        right: 10%;
-        position: absolute;
-        transform: translateX(-25%);
-        
-        
-    }
-
-    .header-container .menu-icon{  
-             
-        visibility: visible;
-        left: 10%;
-        position: absolute;
-        
-        
-    }
-
-    .header-container-show .close-icon{
-
-   
-        visibility: visible;
-        left: 10%;
-        position: absolute;
-        padding-top: 10px;
-        
-    }
-
-    .header-container-show .menu-icon{    
-
-     visibility: hidden;
-        
-    }
-
-    .header-container-show .bag-icon{   
-  
-        visibility:hidden ;    
-    
-    }
-
-    .header-container-show .search-icon{   
-
-        visibility: hidden;
-     
-    }
-  
-
-
-
-
-body, html { /* ESTILO DO CORPO DO SITE */
-    
-    height: 100%;
     font-family: "SF Pro Text Regular", sans-serif; /* FONTE DO CORPO DO SITE, CASO NAO TENHA PEGA A OUTRA */
     
     color: #1d1d1f; /* COR DO TEXTO DO PROJETO */ 
@@ -116,8 +58,6 @@ body, html { /* ESTILO DO CORPO DO SITE */
 }
 
 h1 { /* TRATA DO TITULO */
-
-    font-family: "SF Pro Text Regular", sans-serif; 
     
     font-size: 56px; /* TAMANHO DA FONTE DOS H1 */
     
@@ -141,27 +81,21 @@ h2 { /* TRATA DO SUBTITULO */
 
 .header { /* ESTILIZA A CLASSE HEADER (OU SEJA, O MENU) */
     
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    background: #333333; /* COR DA BARRA DE MENU */
-    padding: 8.5px 0; /* DISTANCIA ENTRE TODOS ELEMENTOS E A BORDA DO MENU */
-    
-}
 
-.header_new { /* ESTILIZA A CLASSE HEADER (OU SEJA, O MENU) */
     
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background:#1d1d1d; ; /* COR FUNDO MENU RESPONSIVO */
+    position: relative;
+
+    max-height: 10%;
+
+    background: #333333; /* COR DA BARRA DE MENU */
+    
     padding: 8.5px 0; /* DISTANCIA ENTRE TODOS ELEMENTOS E A BORDA DO MENU */
     
 }
 
 
 .header-container { /* ESTILIZA A LISTA DENTRO DA BARRA DE MENU */
-    
+
     position: relative;
 
     display: flex; /* FAZ COM QUE A LISTA FIQUE NA HORIZONTAL */
@@ -174,107 +108,114 @@ h2 { /* TRATA DO SUBTITULO */
     
 }
 
+.header .search {
 
+  position: relative;
+  visibility: hidden;
+  max-width: 1px;
 
-.header-container-show { /* ESTILIZA A LISTA DENTRO DA BARRA DE MENU */
-    
-    position: relative;  
-    list-style: none;  
-    
-    /*max-width: 980px; /* TAMANHO DO MENU */
-    height: 100%;
-    
-    margin: 0 auto; /* DEIXA A LISTA (MENU) NO CENTRO DA TELA AUTOMATICAMENTE */
-
-    
 }
 
-.header-container-show li { /* ESTILIZA O HEADER CONTAINER LI A  */
 
-    position: relative;
-    padding-top: 30px;
-    width: 100%;
-    list-style-position: inside;  
-    color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
-    text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
-    font-size: 18px; /* TAMANHO DA FONTE DENTRO DO MENU */
-    border-bottom: 0px solid;
-    border-color:#333333;
-    border-radius: 20px; 
-     
-}
-.search{
-    
-    border-radius: 20px;
-    visibility: hidden;
-    text-align: left;
-    padding: 10px 7px;
-    text-decoration: none;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-    font-family: "SF Pro Text Regular", sans-serif;
+.search-show .header-container .search{
+
+  font-family: "SF Pro Text Regular", sans-serif;
+  text-decoration: none;
+  color:#1d1d1f;
+  border-radius: 20px;
+  position: center;
+  background-color: #d6d6d6;
+  visibility: visible;
+  width: 800px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 20%;
+  height: 30px;
+  
+  
 }
 
-.header-container-show .search{
-    border-radius: 20px;
-    visibility: visible;
-    border: transparent;
-    position: relative;
-    background-color:#333333; 
-    width: 90%;   
-    height: 30px;;
-    left: 5%;
-    bottom: 5%;
-    height: 10;
-    
+.pesquisa {
+  position: center;
+  display: flex;
+
 }
+
+.pesquisa .search{
+
+  font-family: "SF Pro Text Regular", sans-serif;
+  text-decoration: none;
+  color:#1d1d1f;
+  border-radius: 20px;
+  position: center;
+  background-color: #d6d6d6;
+  visibility: visible;
+  width: 600px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 20%;
+  height: 30px;
+  
+  
+}
+
+.search-show .header-container .close-icon{
+  margin-top: 4px;
+  visibility: visible;
+  position: absolute;
+  left: 88%;
+
+}
+
 
 
 ::placeholder {
 
-    border-radius: 20px;
-    color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
-    
-    text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
-    
-    font-size: 16px; /* TAMANHO DA FONTE DENTRO DO MENU */
 
-  }
+  color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
+  
+  text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
+  
+  font-size: 12px; /* TAMANHO DA FONTE DENTRO DO MENU */
 
+  text-align: left;
 
-.header-container-show li a { /* ESTILIZA O HEADER CONTAINER LI A  */
-    border-radius: 20px;
-    padding-left: 10%;
+  
+}
 
-    color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
-    
-    text-decoration: none; /* TIRA A DECORAÇÃO DO TEXTO */
-    
-    font-size: 18px; /* TAMANHO DA FONTE DENTRO DO MENU */
-    
-    
+.search-show {
+
+  position: relative; 
+  
+  background: #333333; /* COR DA BARRA DE MENU */
+  
+  padding: 8.5px 0; /* DISTANCIA ENTRE TODOS ELEMENTOS E A BORDA DO MENU */
+
+  background: #333333; /* COR DA BARRA DE MENU */
+
 }
 
 
-.header-container-show .icon{      
-    border-radius: 20px;
-    position: absolute;
-    margin-top: 2%;
-    left: 50%;
 
+.search-show .header-container{
 
+  visibility: hidden;
+
+  position: relative;
+
+  display: flex; /* FAZ COM QUE A LISTA FIQUE NA HORIZONTAL */
+  
+  justify-content: space-between; /* NAVEGADOR DISTRIBUI ESPACO ENTRE OS ICONES */
+  
+  max-width: 980px; /* TAMANHO DO MENU */
+  
+  margin: 0 auto; /* DEIXA A LISTA (MENU) NO CENTRO DA TELA AUTOMATICAMENTE */
+  
 }
 
-.esconder {
-    border-radius: 20px;
-    position: absolute;
-    display: none;
-    max-height: 1px ;
-    
-}
 
 
-.header-container li a { /* ESTILIZA O HEADER CONTAINER LI A  */
-    border-radius: 20px;
+.header-container li a { /* ESTILIZA O HEADER CONTAINER LI A  */    
 
     color: #d6d6d6; /* COR DA LETRA DA PALAVRA DO MENU */
     
@@ -329,11 +270,8 @@ h2 { /* TRATA DO SUBTITULO */
     
     height: 692px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
     
-    background-image: url(../css/img/iphoneresp.png); /* DEFINE A IMAGEM DE FUNDO */
+    background-image: url(../css/img/bg1.jpg); /* DEFINE A IMAGEM DE FUNDO */
     background-position: center;
-    
-
-    background-size: cover;
     
     
     
@@ -417,7 +355,6 @@ h2 { /* TRATA DO SUBTITULO */
     background: url("../css/img/bg2.jpg") no-repeat; /* INSERE A IMAGEM DE FUNDO BRANCA DO IPHONE 11 */
     background-position: center;
     
-    
     color: #1d1d1d; /* COMO O FUNDO E BRANCO TEM Q COLOCAR A COR PRETA PADRAO DO SITE */
     
 }
@@ -437,15 +374,12 @@ h2 { /* TRATA DO SUBTITULO */
 
 }
 
-.pesquisa a {
 
-    font-family: "SF Pro Text Regular", sans-serif;
-    color:#1d1d1f;
-    margin-left: 50px;
-    margin-top: 20px;
-    font-size: 20px;
 
-}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
 
 @font-face {
     font-family: Ubuntu-Regular;
@@ -456,18 +390,131 @@ h2 { /* TRATA DO SUBTITULO */
     font-family: Ubuntu-Bold;
     src: url("../css/fonts/sf-pro-text-regular.ttf") format("truetype"); 
   }
-
-.limiter {
-
-    font-family: "SF Pro Text Regular", sans-serif;
-    width: px;
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ RESTYLE TAG ]*/
+  
+  * {
+      margin: 0px; 
+      padding: 0px; 
+      box-sizing: border-box;
+  }
+  
+  body, html {
+      height: 1024px;
+      font-family: Ubuntu-Regular, sans-serif;
+  }
+  
+  /*---------------------------------------------*/
+  a {
+      font-family: Ubuntu-Regular;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #666666;
+      margin: 0px;
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+  
+  a:focus {
+      outline: none !important;
+  }
+  
+  a:hover {
+      text-decoration: none;
+    color: #06c;
+  }
+  
+  /*---------------------------------------------*/
+  h1,h2,h3,h4,h5,h6 {
+      margin: 0px;
+  }
+  
+  p {
+      
+      font-family: Ubuntu-Regular;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #666666;
+      margin: 0px;
+  }
+  
+  ul, li {
+      margin: 0px;
+      list-style-type: none;
+  }
+  
+  
+  /*---------------------------------------------*/
+  input {
+      outline: none;
+      border: none;
+  }
+  
+  textarea {
+    outline: none;
+    border: none;
+  }
+  
+  textarea:focus, input:focus {
+    border-color: transparent !important;
+  }
+  
+  input::-webkit-input-placeholder { color: #8f8fa1;}
+  input:-moz-placeholder { color: #8f8fa1;}
+  input::-moz-placeholder { color: #8f8fa1;}
+  input:-ms-input-placeholder { color: #8f8fa1;}
+  
+  textarea::-webkit-input-placeholder { color: #8f8fa1;}
+  textarea:-moz-placeholder { color: #8f8fa1;}
+  textarea::-moz-placeholder { color: #8f8fa1;}
+  textarea:-ms-input-placeholder { color: #8f8fa1;}
+  
+  label {
+    display: block;
+    margin: 0px;
+  }
+  
+  /*---------------------------------------------*/
+  button {
+      outline: none !important;
+      border: none;
+      background: transparent;
+  }
+  
+  button:hover {
+      cursor: pointer;
+  }
+  
+  iframe {
+      border: none !important;
+  }
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Utility ]*/
+  .txt1 {
+    font-family: Ubuntu-Regular;
+    font-size: 16px;
+    color: #06c;
+    line-height: 1.4;
+  }
+  
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ login ]*/
+  
+  .limiter {
+    
+    width: 1024px;
     margin: 0 auto;
   }
   
   .container-login100 {
-
-    font-family: "SF Pro Text Regular", sans-serif;
-    width: 400px;  
+    width: 1080px;  
     min-height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
@@ -486,7 +533,7 @@ h2 { /* TRATA DO SUBTITULO */
   
   
   .wrap-login100 {
-    width: 400px;
+    width: 420px;
     background: #fff;
     border-radius: 10px;
     position: relative;
@@ -501,7 +548,6 @@ h2 { /* TRATA DO SUBTITULO */
   }
   
   .login100-form-title {
-    
     font-family: Ubuntu-Bold;
     font-size: 30px;
     color: #06c;
@@ -652,8 +698,6 @@ h2 { /* TRATA DO SUBTITULO */
   /*------------------------------------------------------------------
   [ Button ]*/
   .container-login100-form-btn {
-
-    font-family: "SF Pro Text Regular", sans-serif;
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -664,8 +708,6 @@ h2 { /* TRATA DO SUBTITULO */
   }
   
   .login100-form-btn {
-
-    font-family: "SF Pro Text Regular", sans-serif;
     font-family: Ubuntu-Bold;
     font-size: 16px;
     color: #fff;
@@ -692,8 +734,6 @@ h2 { /* TRATA DO SUBTITULO */
   }
   
   .login100-form-btn:hover {
-
-    font-family: "SF Pro Text Regular", sans-serif; 
     background-color: #06c;
   }
   
@@ -758,7 +798,7 @@ h2 { /* TRATA DO SUBTITULO */
     opacity: 1;
   }
   
-  @media (max-width: 639px) {
+  @media (max-width: 992px) {
     .alert-validate::before {
       visibility: visible;
       opacity: 1;
@@ -813,47 +853,69 @@ h8{
     color: #1d1d1f;
 }
 
+h9 a  {
+  padding-top: 20px;
+  margin-top: 100px;
+  font-size: 16px;
+  font-family: "SF Pro Text Regular", sans-serif;
+  color: #06c;
+  font-weight: 400; /* INTENSIDADE DO NEGRITO DA FONTE */
+  letter-spacing: -0.016em; /* ESPACAMENTO ENTRE OS CARACTERES DO TEXTO */
+
+}
+h9 a:hover{
+  margin-top: 18px;
+  font-size: 16px;
+  font-family: "SF Pro Text Regular", sans-serif;
+  color: #06c;
+  font-weight: 400; /* INTENSIDADE DO NEGRITO DA FONTE */
+  letter-spacing: -0.016em; /* ESPACAMENTO ENTRE OS CARACTERES DO TEXTO */
+  text-decoration: underline;
+}
+
 .barracadastro { /* TRATA DA BARRA EMBAIXO DO MENU */
-
-    width: 639px;
     
-    text-align: left; /* COLOCA A FRASE DENTRO DA BARRA NO CENTRO */
-    
-    font-size: 12px; /* TAMANHO DA FONTE DA BARRA */
-    
-  }
+  text-align: left; /* COLOCA A FRASE DENTRO DA BARRA NO CENTRO */
   
-  .barracadastro p { /* TRATA DA FRASE TODA QUE FICA EMBAIXO DO MENU */
-    
-    line-height: 1.47059; /* DEFINE A ALTURA DA LINHA DA FRASE */
-    padding: 12px 50px; /* DISTANCIA DOS ELEMENTOS DA BORDA */
-    
-  }
-  .barracadastro .id {
+  font-size: 8px; /* TAMANHO DA FONTE DA BARRA */
   
-    font-family: "SF Pro Text Regular", sans-serif;
-    padding: 0 10px;
-    font-size: 30px;
-    text-align: left;
-    color: #1d1d1f;
-    font-weight: 200;
-  }
+}
 
-  .crieid { /* ESTILIZA TODA A SEÇÃO DO IPHONE SE E TAMBEM DO IPHONE 11 */
+.barracadastro p { /* TRATA DA FRASE TODA QUE FICA EMBAIXO DO MENU */
+  
+
+  line-height: 1.47059; /* DEFINE A ALTURA DA LINHA DA FRASE */
+  
+  padding: 12px 130px; /* DISTANCIA DOS ELEMENTOS DA BORDA */
+  
+}
+.barracadastro .id {
+
+  font-family: "SF Pro Text Regular", sans-serif;
+  padding: 0 410px;
+  font-size: 24px;
+  text-align: left;
+  color: #1d1d1f;
+  font-weight: 600;
+}
+
+.crieid { /* ESTILIZA TODA A SEÇÃO DO IPHONE SE E TAMBEM DO IPHONE 11 */
     
 
-    width: 639px; /* DEFINE A LARGURA DA SECAO */
+    width: 100%; /* DEFINE A LARGURA DA SECAO */
     
-    height: 70px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
+    height: 130px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
     
     background-image: url(../css/img/fundo.jpeg); /* DEFINE A IMAGEM DE FUNDO */
     background-position: center;
+    
+    
     
     color: #ffffff; /* DEFINE A COR DA LETRA DA SECAO */
     
     text-align: center; /* COLOCA A FRASE NO CENTRO DA SECAO */
     
-    padding-top: 20px; /* ESPACO ENTRE A BORDA E A PALAVRA */
+    padding-top: 50px; /* ESPACO ENTRE A BORDA E A PALAVRA */
     
 }
 
@@ -980,20 +1042,131 @@ input, textarea{
 	background-color: #06c;
 }
 
-.pesquisa a {
+.teste a {
   
   font-family: "SF Pro Text Regular", sans-serif;
   color:#1d1d1f;
-  margin-left: 50px;
-  font-size: 20px;
+  margin-left: auto;
+  font-size: 30px;
 }
 
 .botao{
 
-text-align: center;
-font-size: 10px;
-padding-top: 10px;
-border-radius: 20px;
+  text-align: center;
+  font-size: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  
+  }
 
+  .news { /* ESTILIZA TODA A SEÇÃO DO NEWS*/
+    
+
+    width: 100%; /* DEFINE A LARGURA DA SECAO */
+    height: 692px; /* DEFINE A ALTURA DA SECAO (QUE E O DA IMAGEM) */
+    background-position: center;
+    color: #1d1d1f; /* DEFINE A COR DA LETRA DA SECAO */
+    text-align: center; /* COLOCA A FRASE NO CENTRO DA SECAO */
+    padding-top: 50px; /* ESPACO ENTRE A BORDA E A PALAVRA */
+  
 }
 
+.news .titulonews { /* ESTILIZA OS ELEMENTOS DO TITULO DA SECAO */
+    
+
+    margin-bottom: 6px; /* DISTANCIA ENTRE OS ELEMENTOS, OU SEJA, DISTANCIA ENTRE O TITULO E SUBTITULO */
+    
+}
+
+.news .newstexto { /* ESTILIZA OS ELEMENTOS DO SUBTITULO DA SECAO */
+    
+
+    margin-bottom: 12px; /* DISTANCIA ENTRE OS ELEMENTOS, OU SEJA, DISTANCIA ENTRE O TITULO E SUBTITULO */
+    
+}
+
+label,
+textarea {
+    font-size: 16px;
+    letter-spacing: 1px;
+    width: 1000px;
+}
+textarea {
+    padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #1d1d1f;
+    box-shadow: 1px 1px 1px #999;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news .story1 {
+
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.news .story2 {
+
+  text-align: center;
+  font-size: 20px;
+  margin-top:30px;
+  margin-bottom: 10px;
+}
+
+.myButton {
+  text-align: center;
+	background-color:#2998ff;
+	border-radius:13px;
+	border:2px solid #2998ff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "SF Pro Text Regular", sans-serif;
+	font-size:16px;
+	padding:16px 52px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2998ff;
+}
+.myButton:hover {
+	background-color:#2998ff;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.botao{
+
+  margin-top: 20px;
+}
+
+
+.newsapresenta{
+
+color:#1d1d1f;
+background-color: rgba(148, 155, 155, 0.664);
+border-color: rgba(70, 69, 71, 0.4);
+border-radius: 15px;
+margin: 30px 20px 10px 20px;  
+border-style: solid;
+border-bottom-width: 5px;
+border-top-width: 5px;
+border-right-width: 5px;
+border-left-width: 5px;
+}
+.testetexto{
+
+  text-align: center;
+}
+
+
+
+  /*//////////////////////////////////////////////////////////////////
+  [ Responsive ]*/
+  
